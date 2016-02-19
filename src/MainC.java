@@ -1,4 +1,3 @@
-package Bennett.Bernardoni;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.awt.event.KeyAdapter;

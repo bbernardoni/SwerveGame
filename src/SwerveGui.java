@@ -1,9 +1,5 @@
-package Bennett.Bernardoni;
-
 import java.awt.Color;
 import java.awt.Graphics;
-
-import Bennett.Bernardoni.Swerve.driveMode;
 
 public class SwerveGui{
 	
@@ -29,7 +25,7 @@ public class SwerveGui{
 		Robot.Drive(joys[1], -joys[0], joys[3]);
 	}
 
-	public void setDriveMode(driveMode dm) {
+	public void setDriveMode(Swerve.driveMode dm) {
 		Robot.m_eDriveMode = dm;
 	}
 	
@@ -55,7 +51,7 @@ public class SwerveGui{
 		int width = (int)(pxPerIn*Robot.m_dRobotWidth);
 		double radius = Math.sqrt(width*width+height*height)/2.0;
 		double angle = Math.atan2(height,width);
-		if(Robot.m_eDriveMode == driveMode.gyro){
+		if(Robot.m_eDriveMode == Swerve.driveMode.gyro){
 			Robot.m_dGyroAngle = (RobotR + Math.PI/2) % (2*Math.PI);
 			if(Robot.m_dGyroAngle<0){
 				Robot.m_dGyroAngle += 2*Math.PI;

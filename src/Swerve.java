@@ -1,5 +1,3 @@
-package Bennett.Bernardoni;
-
 public class Swerve {
 	
 	public double m_dThetaFR = Math.PI/2;

@@ -1,5 +1,3 @@
-package Bennett.Bernardoni;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -19,15 +17,12 @@ import javax.swing.JRadioButtonMenuItem;
 
 import net.java.games.input.Controller;
 
-import Bennett.Bernardoni.Ball.bc;
-import Bennett.Bernardoni.Swerve.driveMode;
-
 public class GUI extends JFrame{
 
 	private Ball[] Balls = {
-			new Ball(bc.red),new Ball(bc.red),new Ball(bc.red),new Ball(bc.red),new Ball(bc.red),
-			new Ball(bc.blue),new Ball(bc.blue),new Ball(bc.blue),new Ball(bc.pink),new Ball(bc.pink),
-			new Ball(bc.orange),new Ball(bc.yellow)};
+			new Ball(Ball.bc.red),new Ball(Ball.bc.red),new Ball(Ball.bc.red),new Ball(Ball.bc.red),new Ball(Ball.bc.red),
+			new Ball(Ball.bc.blue),new Ball(Ball.bc.blue),new Ball(Ball.bc.blue),new Ball(Ball.bc.pink),new Ball(Ball.bc.pink),
+			new Ball(Ball.bc.orange),new Ball(Ball.bc.yellow)};
 	private SwerveGui My_Swerve = new SwerveGui();
 	Painting Floor = new Painting();
 	long time = -1;
@@ -162,10 +157,10 @@ public class GUI extends JFrame{
 	public class meventDrive implements ActionListener{
 		public void actionPerformed(ActionEvent me1){
 			if(me1.getSource() == mCrab){
-				My_Swerve.setDriveMode(driveMode.crab);
+				My_Swerve.setDriveMode(Swerve.driveMode.crab);
 			}
 			if(me1.getSource() == mGyro){
-				My_Swerve.setDriveMode(driveMode.gyro);
+				My_Swerve.setDriveMode(Swerve.driveMode.gyro);
 			}
 			if(me1.getSource() == mFree){
 				freeMode = true;
